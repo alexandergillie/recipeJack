@@ -17,12 +17,44 @@
     </script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of 639e5a9... try again
 =======
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+    <script>
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    </script>
+    <script>
+    $(document).ready(function()
+    {
+      $("#searchButton").click(function getRecipeJson()
+      {
+        var TitleKeyword = "lasagna";
+        var url = "http://food2fork.com/api/search?key=" + "c7dbfe0f3f5bda393780dae01142b7f5" + "&q=" + TitleKeyword;
+        console.log(url);
+          $.ajax({
+            url: url,
+            dataType: "json",
+            success: function (data)
+            {
+              data = data[1]['title'];
+              alert('success');
+            }
+        });
+      });
+    });
+  </script>
+=======
+<<<<<<< HEAD
+>>>>>>> 0976d0448349905baf62ebb98300499cedee7733
+=======
 
 >>>>>>> parent of 639e5a9... try again
+>>>>>>> 88675aaca3b2a544ec16353b1c8a778cc7a74864
   </head>
 
   <body>
