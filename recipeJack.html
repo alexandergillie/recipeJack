@@ -1,13 +1,28 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <script>
+      var ingredients = [];
+
+      function addIngredient(){
+        singleIngredient = document.getElementById('ingredientBox').value;
+        ingredients.push(singleIngredient);
+        console.log(singleIngredient);
+         var ingredList = document.getElementById('ingredientsList');
+         ingredList.innerHtml -= "</ul>";
+         ingredList.innerHtml += "<li>" + singleIngredient + "</li>" + "</ul>";
+         console.log(ingredList);
+      }
+
+    </script>
+
   </head>
 
   <body>
     <div id="inputIngredients">
       Please enter ingredients:
       <input id="ingredientBox" type="text" value="">
-      <input type="submit" value="Enter">
+      <input type="submit" value="Enter" onclick="addIngredient()">
       <div id="enteredIngredients">
       Ingredients I have:
         <ul id="ingredientsList"></ul>
