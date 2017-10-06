@@ -15,6 +15,10 @@
       }
 
     </script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d94700ba4ee391ed4444e163469205391db3b500
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -27,10 +31,12 @@
       $("#searchButton").click(function getRecipeJson()
       {
         var TitleKeyword = "lasagna";
-        var url = "http://food2fork.com/api/search?key=" + "c7dbfe0f3f5bda393780dae01142b7f5" + "&q=" + TitleKeyword;
+        var url = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random'
+
         console.log(url);
           $.ajax({
             url: url,
+<<<<<<< HEAD
             dataType: "jsonp",
             jsonp: "false",
             jsonpCallback: 'callback',
@@ -38,24 +44,40 @@
             {
               //data = data
               //alert('success');
+=======
+            dataType: "json",
+            headers: {
+              'X-Mashape-Key': 'suPoO3IwEfmshI4aGdQ8zOROhrwOp1NovgtjsnPOBfFdhN6qEw',
+              'Accept': 'application/json'
+            },
+            success: function (data)
+            {
+                alert('success');
+                console.log(data);
+>>>>>>> d94700ba4ee391ed4444e163469205391db3b500
             }
+
         });
       });
     });
   </script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d94700ba4ee391ed4444e163469205391db3b500
   </head>
 
   <body>
     <div id="inputIngredients">
-      Please enter ingredients:
+      Search for recipes by keyword:
       <input id="ingredientBox" type="text" value="">
-      <input type="submit" value="Enter" onclick="addIngredient()">
-      <div id="enteredIngredients">
-      Ingredients I have:
-        <ul id="ingredientsList"></ul>
-      </div>
+      <input type="submit" value="Search" onclick="addIngredient()">
       Select Search to find recipes!
+<<<<<<< HEAD
       <input id="searchButton" type="submit" value="Search">
+=======
+      <input type="submit" value="Search" id="searchButton">
+>>>>>>> d94700ba4ee391ed4444e163469205391db3b500
     </div>
 
   </body>
