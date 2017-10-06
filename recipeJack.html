@@ -42,6 +42,7 @@
             },
             success: function (data)
             {
+                console.log(data);
                 results = "<h3>Your Recipe:</h3>";
                 var randRecipeName = data['recipes'][0]['title'];
                 var randRecipeLink = data['recipes'][0]['spoonacularSourceUrl'];
@@ -70,6 +71,7 @@
       </div>
       <div id="resultsDiv">
       </div>
-    </div>
+      <iframe src="https://open.spotify.com/embed?uri=spotify:user:spotify:playlist:37i9dQZF1DX4dyzvuaRJ0n" width="300" height="380" frameborder="0" allowtransparency="true"></iframe> 
+   </div>
   </body>
 </html>
