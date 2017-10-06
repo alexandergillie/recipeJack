@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "main.css" />
     <script>
       var ingredients = [];
 
@@ -15,10 +18,6 @@
       }
 
     </script>
-<<<<<<< HEAD
-=======
-
->>>>>>> d94700ba4ee391ed4444e163469205391db3b500
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -30,56 +29,47 @@
     {
       $("#searchButton").click(function getRecipeJson()
       {
-        var TitleKeyword = "lasagna";
-        var url = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random'
+        //var TitleKeyword = "lasagna";
+        var url = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1'
 
         console.log(url);
           $.ajax({
             url: url,
-<<<<<<< HEAD
-            dataType: "jsonp",
-            jsonp: "false",
-            jsonpCallback: 'callback',
-            success: function (data)
-            {
-              //data = data
-              //alert('success');
-=======
             dataType: "json",
             headers: {
-              'X-Mashape-Key': 'suPoO3IwEfmshI4aGdQ8zOROhrwOp1NovgtjsnPOBfFdhN6qEw',
+              'X-Mashape-Key': 'kIlsG52yDAmshJEsWHnWputPTWFcp1W6SgYjsnF55N4iCpCscN',
               'Accept': 'application/json'
             },
             success: function (data)
             {
-                alert('success');
-                console.log(data);
->>>>>>> d94700ba4ee391ed4444e163469205391db3b500
+                results = "<h3>Your Recipe:</h3>";
+                var randRecipeName = data['recipes'][0]['title'];
+                var randRecipeLink = data['recipes'][0]['spoonacularSourceUrl'];
+                var randRecipeImage = data['recipes'][0]['image'];
+                results += "<a href='" + randRecipeLink + "'>" + randRecipeName + "</a><br>";
+                results += "<img src='" + randRecipeImage + "'>";
+                $("#resultsDiv").html(results);
             }
-
         });
       });
     });
   </script>
-<<<<<<< HEAD
-=======
-
->>>>>>> d94700ba4ee391ed4444e163469205391db3b500
   </head>
 
   <body>
-    <div id="inputIngredients">
-      Search for recipes by keyword:
-      <input id="ingredientBox" type="text" value="">
-      <input type="submit" value="Search" onclick="addIngredient()">
-      Select Search to find recipes!
-<<<<<<< HEAD
-      <input id="searchButton" type="submit" value="Search">
-=======
-      <input type="submit" value="Search" id="searchButton">
->>>>>>> d94700ba4ee391ed4444e163469205391db3b500
+    <div class="bg">
+      <div id="inputIngredients">
+        <!--Search for recipes by keyword:
+        <input id="ingredientBox" type="text" value="">
+        <input type="submit" value="Search" onclick="addIngredient()">-->
+        <h1>Random Recipe Generator</h1>
+        <p style="text-align: center">Here, click a button and get a recipe and some sick tunes bruh.<br>(please reword this)</p>
+        <p id="button" align="center">
+          <input type="submit" value="Generate Recipe" id="searchButton">
+        </p>
+      </div>
+      <div id="resultsDiv">
+      </div>
     </div>
-
   </body>
-
 </html>

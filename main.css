@@ -1,0 +1,45 @@
+#resultsDiv
+{
+  text-align: center;
+  font-size: 30px;
+}
+
+#searchButton
+{
+
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a
+{
+  color: cyan;
+}
+
+body, html
+{
+  height: 100%;
+}
+
+h1
+{
+
+  line-height: 100px;
+  text-align: center;
+}
+
+.bg
+{
+  position: relative;
+  background-image: url("http://www.powerpointhintergrund.com/uploads/food-background-2.jpg");
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
